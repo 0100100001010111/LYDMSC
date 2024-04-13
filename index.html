@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,34 @@
 
 <p>Hello World!</p>
 <audio src="Let You Down Dawid Podsiadło.mp3" autoplay></audio>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+</head>
+<body>
+
+<p>Hello World!</p>
+<audio id="myAudio" src="Let You Down Dawid Podsiadło.mp3"></audio>
+
+<script>
+    var audio = document.getElementById("myAudio");
+
+    // Play the audio when the page loads
+    audio.play();
+
+    // Continuously play the audio even when tab is in background
+    var playing = setInterval(function() {
+        if (audio.paused) {
+            audio.play();
+        }
+    }, 1000); // Check every second
+</script>
 
 </body>
 </html>
